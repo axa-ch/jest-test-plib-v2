@@ -3,14 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@axa-ch/button": "^2.0.10",
+    "@axa-ch/patterns-library-polyfill": "^1.5.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
+  "devDependencies": {
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "mutationobserver-shim": "^0.3.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test-cra": "react-scripts test --env=jsdom",
+    "test": "node scripts/test.unit.js --env=jsdom",
+    "test-watch": "node scripts/test.unit.js --env=jsdom --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
